@@ -1,11 +1,29 @@
-import React from 'react';
-import Hello from './sayHello';
+import React,{useState} from 'react';
+import Tweet from './tweet';
+import './App.css'; 
 
 function App(){
+
+  const [IsRed,setRed]=useState(false);
+  const [count,setCount]=useState(0);
+  const[user,setUser]=useState({
+    name:"Elvis",
+    age:25,
+    post:['my first post','my lovely summer']
+  });
+  
+  const increment = () => {
+    setCount(count+1);
+  };
   return(
-   <div>
+   <div className="App">
      <h1>Hello React APP component</h1>
-     <Hello />
+      <button onClick={increment}>Increment</button>
+      <h1>{count}</h1>
+    <Tweet name="DEV ED" message="This is random message"/>
+    <Tweet name="LIVERPOL" message="This is random message2"/>
+    <Tweet name="CHELSEA " message="This is random message3"/>
+    <Tweet name="EVERTON" message="This is random message4"/>
    </div> 
   );
 }
