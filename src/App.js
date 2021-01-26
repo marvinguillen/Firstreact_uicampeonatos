@@ -1,4 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import Hello from './sayHello';
+
+function App(){
+  return(
+   <div>
+     <h1>Hello React APP component</h1>
+     <Hello />
+   </div> 
+  );
+}
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -23,3 +48,4 @@ function App() {
 }
 
 export default App;
+*/
