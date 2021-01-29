@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Tweet from './tweet';
 import './App.css'; 
+import {Greet} from './components/Greet';
 
 function App(){
  const[count,setCount]=useState(0);
@@ -23,11 +24,10 @@ function App(){
   };
   return(
    <div className="App">
-     <h1>Hello React APP component</h1>
-      {user.map(user =>(
-        <Tweet name ={user.name} message={user.message}></Tweet>
-      ))}
-       </div> 
+ 
+       <Greet/>
+
+      </div>
   );
 }
 export default App;
