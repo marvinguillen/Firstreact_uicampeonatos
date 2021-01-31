@@ -6,6 +6,9 @@ import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Message from './components/Message';
 import Counter from './components/Counter';
+import FuntionalClick from './components/FuntionalClick'
+import ClassClick from './components/ClassClick';
+import EventBind from './components/EventBind';
 function App(){
  const[count,setCount]=useState(0);
   const[user,setUsers]=useState([
@@ -27,8 +30,9 @@ function App(){
   };
   return(
    <div className="App">
-     
+     <EventBind/>
  {/*
+ <ClassClick/>
  <Counter/>
  <Message/>*/}
 
@@ -43,10 +47,12 @@ function App(){
     <button>Action</button>
     </Greet>
     <Welcome name="Clark" heroName="Superman"/>
-    <Welcome name="Diana" heroName="Wonder woman"/>
-    */}
      <Greet name="Diana" heroName="Wonder woman"/>
+    <Welcome name="Diana" heroName="Wonder woman"/>
      <Welcome name="Bruce" heroName="Batman"/>
+    */}
+    <FuntionalClick/>
+    
    
     </div>
   );
