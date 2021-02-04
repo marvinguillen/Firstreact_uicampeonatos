@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, Component, createRef } from 'react';
 import Tweet from './tweet';
 import './App.css'; 
 import {Greet} from './components/Greet';
@@ -9,7 +9,23 @@ import Counter from './components/Counter';
 import FuntionalClick from './components/FuntionalClick'
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
-function App(){
+import  { ProductProvider } from './components/UserComponent';
+
+function App () {
+
+  return (
+    <div className="App">
+<ProductProvider></ProductProvider>
+    Hello React Course
+     
+</div>
+    );
+  }
+//}
+
+export default App;
+
+/*function App(){
  const[count,setCount]=useState(0);
   const[user,setUsers]=useState([
     {name:"Elvis",
@@ -30,14 +46,16 @@ function App(){
   };
   return(
    <div className="App">
-     <EventBind/>
- {/*
+  <UserComponent/>*/
+     /*
+      <EventBind/>
+
  <ClassClick/>
  <Counter/>
- <Message/>*/}
+ <Message/>*/
 
-      {/* <Hello />*/}
-      {/* <Welcome />
+      /* <Hello />*/
+      /* <Welcome />
     <Greet name="Bruce" heroName="Batman">
       <p>
         This is children props
@@ -50,15 +68,17 @@ function App(){
      <Greet name="Diana" heroName="Wonder woman"/>
     <Welcome name="Diana" heroName="Wonder woman"/>
      <Welcome name="Bruce" heroName="Batman"/>
-    */}
     <FuntionalClick/>
+    */
+   /*}}
+    
     
    
     </div>
   );
 }
 export default App;
-
+*/
 
 
 
